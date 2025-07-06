@@ -5,15 +5,20 @@ public class CameraHolder : MonoBehaviour
     public Player player;
     public Transform followObject;
     public float rotateSpeed;
+    public bool isFollowing;
+    public bool isRotating;
 
     private void FixedUpdate()
     {
-        transform.position = followObject.position;
+        if (isFollowing)
+        {
+            transform.position = followObject.position;
+        }
     }
 
     private void Update()
     {
-        if (!player.didDragStartFromPlayer)
+        if (isRotating && !player.didDragStartFromPlayer)
         {
             if (Input.GetMouseButton(0))
             {

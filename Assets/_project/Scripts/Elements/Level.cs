@@ -14,7 +14,7 @@ public class Level : MonoBehaviour
     public float heightChance;
     public void StartLevel()
     {
-        for (int j = 0; j < yLength; j++)
+        /*for (int j = 0; j < yLength; j++)
         {
             for (int i = 0; i < xLength; i++)
             {
@@ -40,7 +40,7 @@ public class Level : MonoBehaviour
                 tiles.Add(newTile);
             }
         }
-        transform.position += Vector3.back * yLength / 2f;
+        transform.position += Vector3.back * yLength / 2f;*/
         
     }
 }

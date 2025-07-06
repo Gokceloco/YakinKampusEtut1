@@ -19,6 +19,11 @@ public class LevelManager : MonoBehaviour
         CreateNewLevel();
     }
 
+    public void SetParentToLevel(Transform t)
+    {
+        t.SetParent(_curLevel.transform);
+    }
+
     private void CreateNewLevel()
     {
         _curLevel = Instantiate(levels[0]);
